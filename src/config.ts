@@ -14,13 +14,12 @@ import type {
 
 //--- Readme Page Config ---
 export const SITE: Site = {
-  title: 'Hello,Memory!',
-  description:
-    'Ahan的个人博客',
+  title: '阿寒的博客',
+  description: '西安电子科技大学 · 集成电路专业。记录学习、算法、芯片与生活。',
   website: 'https://neoleramol.github.io/blog/',
-  lang: 'en',
+  lang: 'zh-CN',
   base: '/blog',
-  author: 'Ahan',
+  author: '阿寒',
   ogImage: '/og-image.webp',
   transition: false,
   themeAnimation: true,
@@ -28,38 +27,38 @@ export const SITE: Site = {
 
 export const HEADER_LINKS: Link[] = [
   {
-    name: 'Posts',
+    name: '文章',
     url: '/posts',
   },
   {
-    name: 'Projects',
+    name: '项目',
     url: '/projects',
   },
   {
-    name: 'Photos',
+    name: '相册',
     url: '/photos',
   },
 ]
 
 export const FOOTER_LINKS: Link[] = [
   {
-    name: 'Readme',
+    name: '首页',
     url: '/',
   },
   {
-    name: 'Posts',
+    name: '文章',
     url: '/posts',
   },
   {
-    name: 'Projects',
+    name: '项目',
     url: '/projects',
   },
   {
-    name: 'Tags',
+    name: '标签',
     url: '/tags',
   },
   {
-    name: 'Photos',
+    name: '相册',
     url: '/photos',
   },
 ]
@@ -68,19 +67,9 @@ export const FOOTER_LINKS: Link[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'github',
-    url: 'https://github.com/Dnzzk2',
+    url: 'https://github.com/neoleramol',
     icon: 'icon-[ri--github-fill]',
     count: 20,
-  },
-  {
-    name: 'twitter',
-    url: 'https://x.com/yourname',
-    icon: 'icon-[ri--twitter-x-fill]',
-  },
-  {
-    name: 'bilibili',
-    url: 'https://space.bilibili.com/yourSpaceId',
-    icon: 'icon-[ri--bilibili-fill]',
   },
 ]
 
@@ -101,34 +90,29 @@ export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
       direction: 'left',
       skills: [
         {
-          name: 'JavaScript',
-          icon: 'icon-[skill-icons--javascript]',
-          url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          name: 'C/C++',
+          icon: 'icon-[skill-icons--cpp]',
+          url: 'https://isocpp.org/',
         },
         {
-          name: 'CSS',
-          icon: 'icon-[skill-icons--css]',
-          url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          name: 'Python',
+          icon: 'icon-[skill-icons--python]',
+          url: 'https://www.python.org/',
         },
         {
-          name: 'HTML',
-          icon: 'icon-[skill-icons--html]',
-          url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+          name: 'Verilog',
+          icon: 'icon-[mdi--chip]',
+          url: 'https://en.wikipedia.org/wiki/Verilog',
         },
         {
-          name: 'TypeScript',
-          icon: 'icon-[skill-icons--typescript]',
-          url: 'https://www.typescriptlang.org/',
+          name: 'Git',
+          icon: 'icon-[skill-icons--git]',
+          url: 'https://git-scm.com/',
         },
         {
-          name: 'Vue',
-          icon: 'icon-[skill-icons--vuejs-dark]',
-          url: 'https://vuejs.org/',
-        },
-        {
-          name: 'Sass',
-          icon: 'icon-[skill-icons--sass]',
-          url: 'https://sass-lang.com/',
+          name: 'Linux',
+          icon: 'icon-[skill-icons--linux-dark]',
+          url: 'https://www.kernel.org/',
         },
       ],
     },
@@ -151,54 +135,14 @@ export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
           url: 'https://react.dev/',
         },
         {
-          name: 'Next.js',
-          icon: 'icon-[skill-icons--nextjs-dark]',
-          url: 'https://nextjs.org/',
-        },
-        {
           name: 'Tailwind CSS',
           icon: 'icon-[skill-icons--tailwindcss-dark]',
           url: 'https://tailwindcss.com/',
         },
         {
-          name: 'Vite',
-          icon: 'icon-[skill-icons--vite-dark]',
-          url: 'https://vitejs.dev/',
-        },
-      ],
-    },
-    {
-      direction: 'left',
-      skills: [
-        {
-          name: 'Ubuntu',
-          icon: 'icon-[skill-icons--ubuntu-dark]',
-          url: 'https://ubuntu.com/',
-        },
-        {
-          name: 'Git',
-          icon: 'icon-[skill-icons--git]',
-          url: 'https://git-scm.com/',
-        },
-        {
-          name: 'MongoDB',
-          icon: 'icon-[skill-icons--mongodb]',
-          url: 'https://www.mongodb.com/',
-        },
-        {
-          name: 'Vercel',
-          icon: 'icon-[skill-icons--vercel-dark]',
-          url: 'https://vercel.com/',
-        },
-        {
           name: 'VS Code',
           icon: 'icon-[skill-icons--vscode-dark]',
           url: 'https://code.visualstudio.com/',
-        },
-        {
-          name: 'Obsidian',
-          icon: 'icon-[skill-icons--obsidian-dark]',
-          url: 'https://obsidian.md/',
         },
       ],
     },
@@ -215,16 +159,16 @@ export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
 
 export const GITHUB_CONFIG: GithubConfig = {
   ENABLED: true,
-  GITHUB_USERNAME: 'Dnzzk2',
+  GITHUB_USERNAME: 'neoleramol',
   TOOLTIP_ENABLED: true,
 }
 
 //--- Posts Page Config ---
 export const POSTS_CONFIG: PostConfig = {
-  title: 'Posts',
-  description: 'Posts by Dnzzk2',
-  introduce: 'Here, I will share the usage instructions for this theme to help you quickly use it.',
-  author: 'Dnzzk2',
+  title: '文章',
+  description: '这里记录我的学习笔记与思考',
+  introduce: '集成电路、算法竞赛、技术笔记与生活随笔。',
+  author: '阿寒',
   homePageConfig: {
     size: 2,
     type: 'compact',
@@ -241,27 +185,27 @@ export const POSTS_CONFIG: PostConfig = {
   ogImageUseCover: false,
   postType: 'metaOnly',
   imageDarkenInDark: true,
-  readMoreText: 'Read more',
-  prevPageText: 'Previous',
-  nextPageText: 'Next',
-  tocText: 'On this page',
-  backToPostsText: 'Back to Posts',
-  nextPostText: 'Next Post',
-  prevPostText: 'Previous Post',
-  recommendText: 'REC',
+  readMoreText: '阅读全文',
+  prevPageText: '上一页',
+  nextPageText: '下一页',
+  tocText: '本页目录',
+  backToPostsText: '返回文章',
+  nextPostText: '下一篇',
+  prevPostText: '上一篇',
+  recommendText: '推荐',
   wordCountView: true,
 }
 
 export const COMMENT_CONFIG: CommentConfig = {
-  enabled: true,
+  enabled: false,
   system: 'gitalk',
   gitalk: {
     clientID: import.meta.env.PUBLIC_GITHUB_CLIENT_ID,
     clientSecret: import.meta.env.PUBLIC_GITHUB_CLIENT_SECRET,
     repo: 'gitalk-comment',
-    owner: 'Dnzzk2',
-    admin: ['Dnzzk2'],
-    language: 'en-US',
+    owner: 'neoleramol',
+    admin: ['neoleramol'],
+    language: 'zh-CN',
     perPage: 5,
     pagerDirection: 'last',
     createIssueManually: false,
@@ -271,21 +215,21 @@ export const COMMENT_CONFIG: CommentConfig = {
 }
 
 export const TAGS_CONFIG: TagsConfig = {
-  title: 'Tags',
-  description: 'All tags of Posts',
-  introduce: 'All the tags for posts are here, you can click to filter them.',
+  title: '标签',
+  description: '所有文章标签',
+  introduce: '这里是全部文章标签，点击可筛选。',
 }
 
 export const PROJECTS_CONFIG: ProjectConfig = {
-  title: 'Projects',
-  description: 'The examples of my projects.',
-  introduce: 'The examples of my projects.',
+  title: '项目',
+  description: '我做过的项目展示',
+  introduce: '这里展示我做过的项目和作品。',
 }
 
 export const PHOTOS_CONFIG: PhotosConfig = {
-  title: 'Photos',
-  description: 'Here I will record some photos taken in daily life.',
-  introduce: 'Here I will record some photos taken in daily life.',
+  title: '相册',
+  description: '记录生活中的照片',
+  introduce: '这里记录一些日常拍的照片。',
 }
 
 export const ANALYTICS_CONFIG: AnalyticsConfig = {
