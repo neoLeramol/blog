@@ -14,13 +14,13 @@ import type {
 
 //--- Readme Page Config ---
 export const SITE: Site = {
-  title: 'Litos',
+  title: 'Hello,Memory!',
   description:
-    'Litos is a modern blogging theme built on Astro.js, designed for developers. It supports multiple post layouts, photo displays, project displays, and more, providing an elegant user experience and powerful customization capabilities.',
-  website: 'https://litos.vercel.app/',
+    'Ahan的个人博客',
+  website: 'https://neoleramol.github.io/blog/',
   lang: 'en',
-  base: '/',
-  author: 'Dnzzk2',
+  base: '/blog',
+  author: 'Ahan',
   ogImage: '/og-image.webp',
   transition: false,
   themeAnimation: true,
