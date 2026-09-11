@@ -33,12 +33,13 @@ const { page, tag } = Astro.props
 const description = `Posts with the tag #${tag}`
 ---
 
+
 <Layout title={`#${tag}`} {description}>
   <div class="relative z-[1] py-8 pb-10 px-6 sm:px-8">
     <div class="mb-12 md:mb-16">
       <div class="flex flex-col gap-3">
         <nav class="flex items-center gap-3 text-sm text-muted-foreground/80">
-          <a href="/tags" class="group flex items-center gap-2 hover:text-primary transition-colors">
+          <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tags`} class="group flex items-center gap-2 hover:text-primary transition-colors">
             <span class="icon-[ph--tag-simple] w-4 h-4"></span>
             <span>Tags</span>
           </a>
@@ -64,6 +65,6 @@ const description = `Posts with the tag #${tag}`
       <List posts={page.data} type={POSTS_CONFIG.tagsPageConfig.type} coverLayout={POSTS_CONFIG.tagsPageConfig?.coverLayout} />
     </div>
 
-    <Pagination {page} baseUrl={`/tags/${tag}`} class="mt-12" />
+    <Pagination {page} baseUrl={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tags/${tag}`} class="mt-12" />
   </div>
 </Layout>

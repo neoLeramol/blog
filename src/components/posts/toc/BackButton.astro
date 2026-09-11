@@ -15,7 +15,7 @@ const { class: className, post, posts } = Astro.props
 const postIndex = posts.findIndex((p) => p.id === post.id)
 const pageSize = POSTS_CONFIG.postPageConfig.size
 const pageNumber = Math.floor(postIndex / pageSize) + 1
-const pageUrl = pageNumber === 1 ? '/posts' : `/posts/${pageNumber}`
+const pageUrl = pageNumber === 1 ? `${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts` : `${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts/${pageNumber}`
 ---
 
 <a

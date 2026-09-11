@@ -38,10 +38,11 @@ const iconConfig = {
 const iconClass = iconConfig[type]
 ---
 
+
 {
   type === 'tag' ? (
     <a
-      href={`/tags/${content}`}
+      href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/tags/${content}`}
       aria-label={`View posts tagged with ${content}`}
       class={cn(
         'inline-flex items-center font-medium  transition-colors duration-200 select-none',

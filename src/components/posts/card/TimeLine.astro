@@ -10,6 +10,7 @@ const { post, class: className, style }: Props = Astro.props
 const recommendText = POSTS_CONFIG.recommendText
 ---
 
+
 <article class:list={['group relative pl-10 pr-4 sm:pr-32 md:pr-44', className]} {style}>
   <div class="absolute left-0 top-0 h-full flex flex-col items-center">
     <div class="h-2 w-2 rounded-full bg-primary/20 group-hover:bg-primary transition-colors z-10 mt-[0.25rem] sm:mt-[0.5rem]"></div>
@@ -54,7 +55,7 @@ const recommendText = POSTS_CONFIG.recommendText
         </div>
       </div>
 
-      <a href={`/posts/${post.id}`} class="block group/title">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts/${post.id}`} class="block group/title">
         <div class="text-base font-semibold text-foreground/90 group-hover:text-primary transition-colors">
           {post.data.title}
         </div>

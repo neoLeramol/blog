@@ -25,41 +25,44 @@ export const SITE: Site = {
   themeAnimation: true,
 }
 
+// 路径前缀：自动适配 base（/blog 或 /）
+const BASE = (import.meta.env?.BASE_URL ?? '/').replace(/\/$/, '')
+
 export const HEADER_LINKS: Link[] = [
   {
     name: '文章',
-    url: '/posts',
+    url: `${BASE}/posts`,
   },
   {
     name: '项目',
-    url: '/projects',
+    url: `${BASE}/projects`,
   },
   {
     name: '相册',
-    url: '/photos',
+    url: `${BASE}/photos`,
   },
 ]
 
 export const FOOTER_LINKS: Link[] = [
   {
     name: '首页',
-    url: '/',
+    url: `${BASE}/`,
   },
   {
     name: '文章',
-    url: '/posts',
+    url: `${BASE}/posts`,
   },
   {
     name: '项目',
-    url: '/projects',
+    url: `${BASE}/projects`,
   },
   {
     name: '标签',
-    url: '/tags',
+    url: `${BASE}/tags`,
   },
   {
     name: '相册',
-    url: '/photos',
+    url: `${BASE}/photos`,
   },
 ]
 

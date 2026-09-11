@@ -8,6 +8,7 @@ interface Props extends CardProps {}
 const { post, class: className, style }: Props = Astro.props
 ---
 
+
 <div class:list={['group relative block py-6 border-b border-border/60 last:border-none', className]} {style}>
   <article class="relative z-1 flex flex-col gap-2 transform transition-transform duration-300 group-hover:translate-x-4">
     <div class="flex sm:items-center gap-2 sm:gap-3 text-sm text-muted-foreground">
@@ -28,7 +29,7 @@ const { post, class: className, style }: Props = Astro.props
         )
       }
     </div>
-    <a href={`/posts/${post.id}`} class="block">
+    <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts/${post.id}`} class="block">
       <div class="text-base font-semibold text-foreground leading-tight group-hover:text-primary transition-colors line-clamp-2">
         {post.data.title}
       </div>
