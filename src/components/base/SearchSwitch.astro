@@ -36,6 +36,23 @@
 
 <script>
   const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+  // 健壮 URL 拼接：兼容 pagefind 返回的多种 URL 形式
+  //  - '/posts/xxx/'      → BASE + '/posts/xxx/'
+  //  - 'posts/xxx/'       → BASE + '/posts/xxx/'
+  //  - '/blog/posts/xxx/' → 原样（已含 base）
+  //  - 'https://...'      → 原样
+  //  - '/posts/x/#anchor' → BASE + '/posts/x/#anchor'（保留锚点）
+  const toUrl = (u: string): string => {
+    if (!u) return BASE + '/'
+    if (/^https?:\/\//i.test(u)) return u
+    const hashIdx = u.indexOf('#')
+    const hash = hashIdx >= 0 ? u.slice(hashIdx) : ''
+    let path = hashIdx >= 0 ? u.slice(0, hashIdx) : u
+    if (!path.startsWith('/')) path = '/' + path
+    if (BASE && (path === BASE || path.startsWith(BASE + '/'))) return path + hash
+    return BASE + path + hash
+  }
   const searchInput = document.getElementById('search-input') as HTMLInputElement
   const searchMask = document.getElementById('search-mask')
   const searchSwitch = document.getElementById('search-switch')
@@ -166,7 +183,7 @@
         const data = await result.data()
         // 显示主结果
         const resultItem = document.createElement('a')
-        resultItem.href = BASE + data.url
+        resultItem.href = toUrl(data.url)
         resultItem.className = 'search-results-item'
         resultItem.innerHTML = `
           <div class="search-results-title">${data.meta.title}</div>
@@ -185,7 +202,7 @@
             if (!cleanTitle) continue; // 跳过空标题
 
             const subItem = document.createElement('a')
-            subItem.href = BASE + subResult.url
+            subItem.href = toUrl(subResult.url)
             subItem.className = 'search-results-item sub-result pl-4 border-l-2 border-accent'
             subItem.innerHTML = `
               <div class="search-results-title text-sm opacity-80">${cleanTitle}</div>
